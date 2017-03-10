@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/student/Desktop/CSUMB/CST370/Final/FinalProject1_Eggensperger_Mariya/bst_occurance_tester.cpp
+iostream
+-
+regex
+-
+sstream
+-
+
