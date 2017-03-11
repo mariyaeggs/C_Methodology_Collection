@@ -1,0 +1,14 @@
+#include <iostream>
+#include <iomanip>
+using namespace std; 
+
+int main()
+{
+	count =5; 
+	while(count<10)
+	{
+		cout << count*2; 
+		cout+=2; 
+	}
+	return 0;
+}

@@ -1,0 +1,85 @@
+Week 4 quiz
+
+The value of a relational expression such as hours > 40 depends on the ____ stored in the variable hours.
+Select one:
+a. condition
+b. sign
+c. relationship
+d. value CorrectCorrect
+Feedback
+The correct answer is: value
+
+
+Question 2
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Using ____ to enclose a set of statements creates a single block of statements.
+Select one:
+a. curly brackets CorrectCorrect
+b. semicolons
+c. colons
+d. parentheses
+Feedback
+The correct answer is: curly brackets
+
+
+Question 3
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+In an if-else chain, the final else is ____.
+Select one:
+a. required
+b. recommended
+c. not used
+d. a default or catch-all case CorrectCorrect
+Feedback
+The correct answer is: a default or catch-all case
+
+
+Question 4
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+In the absence of braces in an if-else statement, each else is associated with the ________.
+Select one:
+a.  "if" that is immediately above it CorrectIncorrect
+b.  "if" that uses the same variables
+c.  "if" that follows it
+d.  "if" closest to the return statement in the code
+Feedback
+The correct answer is:  "if" that is immediately above it
+
+
+Question 5
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Like all C++ expressions, relational expressions are evaluated to yield a ____ result.
+Select one:
+a. numerical CorrectCorrect
+b. character
+c. single-precision
+d. double-precision
+Feedback
+The correct answer is: numerical
+
+
+Question 6
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Relational expressions are also called ____.
+Select one:
+a. options
+b. conditions CorrectCorrect
+c. directions
+d. paths
+Feedback
+The correct answer is: conditions

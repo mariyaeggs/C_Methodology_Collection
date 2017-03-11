@@ -1,0 +1,82 @@
+Started on	Monday, 14 September 2015, 7:08 AM
+State	Finished
+Completed on	Monday, 14 September 2015, 7:15 AM
+Time taken	6 mins 45 secs
+Grade	4.00 out of 4.00 (100%)
+
+
+Question 1
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Which of the following would create output that looks like this:
+
+Go!
+Gavilan Hawks!
+Go!
+
+Select one:
+a. cout << "Go!" endl "Gavilan Hawks!" endl "Go!";
+b. cout << "Go!"
+"Gavilan Hawks!"
+"Go!";
+c. cout << "Go!\nGavilan Hawks!\nGo!"; Correct
+Feedback
+Your answer is correct.
+The correct answer is: cout << "Go!\nGavilan Hawks!\nGo!";
+
+
+Question 2
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Which of the following is the correct syntax for printing "Hello, world!" to the screen?
+
+Select one:
+a. cout << "Hello, world!"; Correct
+b. cout "Hello, world!'
+c. cout << "Hello, world!"
+d. cout < "Hello, world!";
+Feedback
+Your answer is correct.
+The correct answer is: cout << "Hello, world!";
+
+
+Question 3
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Why is
+
+#include <iostream>
+
+put at the top of most programs written for this class?
+
+Select one:
+a. It tells the compiler that the program is written in C++.
+b. It provides the functions necessary to get keyboard input and send output to the screen. Correct
+c. It allows comments to appear at the top of the program.
+d. It is needed so the curly brackets are understood.
+Feedback
+Your answer is correct.
+The correct answer is: It provides the functions necessary to get keyboard input and send output to the screen.
+
+
+Question 4
+Correct
+Mark 1.00 out of 1.00
+ Not flaggedFlag question
+Question text
+Which function must every C++ program have?
+
+Select one:
+a. std
+b. main() Correct
+c. return 0
+d. iostream()
+Feedback
+Your answer is correct.
+The correct answer is: main()
