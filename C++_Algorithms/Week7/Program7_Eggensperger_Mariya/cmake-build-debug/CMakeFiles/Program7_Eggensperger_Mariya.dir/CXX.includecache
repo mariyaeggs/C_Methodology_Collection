@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/student/Desktop/CSUMB/CST370/Week7/Program7_Eggensperger_Mariya/BST.cpp
+iostream
+-
+iomanip
+-
+BST.h
+/Users/student/Desktop/CSUMB/CST370/Week7/Program7_Eggensperger_Mariya/BST.h
+
+/Users/student/Desktop/CSUMB/CST370/Week7/Program7_Eggensperger_Mariya/BST.h
+iostream
+-
+
+/Users/student/Desktop/CSUMB/CST370/Week7/Program7_Eggensperger_Mariya/bst_tester.cpp
+iostream
+-
+BST.h
+/Users/student/Desktop/CSUMB/CST370/Week7/Program7_Eggensperger_Mariya/BST.h
+
