@@ -1,0 +1,337 @@
+Mariya Eggensperger
+CSIS 46, Spring 2016
+Prof. Pam Wiese
+
+CHAPTER 3
+
+Multiple Choice 
+
+1)  When const is placed at the end of a function prototype (preceding a semicolon), it indicates:
+A. that the returned value must be a literal number instead of the value of a variable
+B. that a variable cannot be passed in as a parameter
+C. that the function returns the same value every time
+D. that the values of the data members declared within the class definition will not change during execution of the function
+
+2)  When an object is passed as a parameter into a function and the object will not change within the function, we should pass the object by:
+A. reference
+B. value
+C. copy
+D. const reference
+
+3)  A(n) ____________________ is commonly used to initialize the data members of a class when an object is first made.
+A. const function
+B. const reference function
+C. initializer
+D. constructor
+
+4)  A(n) _________________ constructor is a constructor that has no parameters.
+A. empty
+B. default
+C. poorly written
+D. null
+
+5)  A(n) ______________ array is an array that typically fills with elements from beginning to end, then starts filling with elements at the beginning again, overwriting the elements that are already there..
+A. overwriting
+B. looping
+C. circular
+D. Johnson
+
+6)  Suppose that the price of an item is stored as an integer (number of cents) within a data member of a class.  When the client wants to set the price, however, a setPrice function is called which passes a number in as dollars and cents (a float), then it is converted and stored as cents by the setPrice function.  This is an example of:
+A. a const function
+B. a const reference function
+C. an accessor function
+D. data translation
+
+7)  When const is used at the end of a function prototype (preceding the semicolon), the following are true EXCEPT
+A. const must also be placed at the end of the function heading of the corresponding function in the implementation file
+B. when the function is called from the main program, it is called the same way as if const were not even used
+C. the returned value must be a literal number instead of the value of a variable
+D. it can aid in debugging
+
+8)  If we want to pass a DataType parameter called item by const reference into a function bar, the function prototype for bar would look like this:
+A. bar( DataType & item ) const;
+B. bar( DataType const & item );
+C. bar( DataType & item const );
+D. bar( const DataType & item );
+
+9)  Suppose a constructor with no parameters needs to be written for a Foo class (not a class template).  The function heading of the Foo constructor in the implementation file would look like this:
+A. Foo( )
+B. void Foo::Foo( )
+C. Foo::Foo( )
+D. void Foo( )
+
+10)  Suppose we wish to use a constructor of a Foo class (not a class template) that passes in one integer parameter.  We wish to make an object called f and pass 5 into this constructor.  The code for doing so would look like this:
+A. f.Foo( 5 );
+B. Foo( 5 ) f;
+C.  Foo f( 5 );
+D. f( Foo( 5 ) );
+
+11)  We wish to modify a class while keeping it backward compatible.  Which of the following can we successfully do?
+A. Remove a function.
+B. Change a function’s return type from a float to a char
+C. Add another parameter to a function
+D. Add a new function to the class
+
+12)  We wish to modify a class, but we cannot do so while keeping it backward compatible.  A reasonable approach is to:
+A. rename the class
+B. form a new class, like the existing class but modified the way we want, and keep the existing class
+C. use a Peterson Language Modifier, go to the Build menu, select Interface, then select the modifications that prevented the class from being backwards compatible, and finally, click on the modify interface button, being careful not to drag the modifications
+D. make a class template, using DataType for the function name
+
+
+13)  We wish to have a Checkbook class template where we use DataType for the type of the deposit in the deposit function (instead of the check in the writeCheck function).  The client might use a Deposit struct object for DataType, containing the amount to deposit, the date of the deposit, and other information.  The deposit function will only add the amount of the deposit to the balance (a data member in the private section), and then store the Deposit object in a data member of the Checkbook class called lastDeposit.  The deposit function has a single parameter of DataType (for depositing), which should be passed by:
+A. const reference
+B. value
+C. copy
+D. reference
+
+14)  We wish to make a constructor for a Bar class that will only initialize two of its data members x and y to -1 and 0, respectively.  The constructor we make should:
+A. pass in two parameters by value
+B. pass in, by value, one struct object with two data members
+C. be a default constructor
+D. pass in two parameters by const reference
+
+15)  Suppose we have a WashingMachine class and we have a function called raisePrice, which passes in an amount to raise the price by.  After the class has been in use by a number of clients, we wish to add more to the raisePrice function, passing in two parameters, the amount to raise the price by and the date the price is being raised.  We should:
+A. make a new function, perhaps calling it raisePriceAndDate, which passes in these two parameters, while keeping the old raisePrice function in the class.
+B. change the raisePrice function to pass in the two parameters.
+C. change the amount parameter from a float type to a struct object type that has data members for amount and date.
+D. turn the class into a class template and use DataType for the function name
+
+16)  We wish to keep track of the last ten flights that leave a gate of an airport.  We make a FlightHistory class with an array that can store ten flight numbers.  Since many more than ten flights will eventually leave the gate, to keep track of the last ten flights, we should use a:                             
+A. overwriting array
+B. looping array
+C. Johnson array
+D. circular array
+
+17)  Suppose we have an integer data member in a class called errorCode.  There is also a function of a class called getError.  Since the client cannot understand what the integer value means in the errorCode, the getError function returns a string that gives the meaning of the current integer value.  This is an example of:
+A. a const reference function
+B. a const function
+C. data translation
+D. poor programming practice
+
+
+
+
+
+18)  A compiler complains that there was an attempt to change the value of a data member within a function (when const is correctly used at the end of the function prototype).  This is an example of:
+A. a picky compiler
+B. abstraction
+C. a const reference function
+D. how const aids in debugging
+
+19)  One reason to pass a parameter by const reference is:
+A. we do not want the function to change the values of any data members
+B. we want changes in the parameter to be reflected back to the calling function
+C. we want to constantly use pass by reference
+D. the compiler will catch an attempt to change the value of the parameter
+
+20)  Suppose we want a constructor for a class that does nothing, and we will never want to write a constructor that does something.  It is good programming practice to:
+A. write a constructor that does nothing (has no parameters and no lines of code in its function block)
+B. leave the constructor out, because the same type of constructor will be supplied by the compiler automatically
+C. make a null constructor
+D. make a constructor that sets all integer data members to 0
+
+21)  Suppose a data member of a class is to be given an initial value.  We have a function that clients can use for setting the initial value called setValue.  For this particular data member, after the setValue function has been used once, there is no reason to use it again.  Clients have been using this class for a while, but later on we realize that we could have just made a constructor that sets the initial value, saving the client from having to use a call to the setValue function.  We should:
+A. add the new constructor and take the setValue function out
+B. leave the class the way it is, to avoid client confusion
+C. add the new constructor and leave the setValue function in
+D. send an email of apology to the clients
+
+22)  We want to initialize the data members of a class to some particular values that the client selects.  To do this, we should write a:
+A. default constructor
+B. constructor that has parameters
+C. constructor with const at the end of the function prototype
+D. constructor that returns true or false, depending on whether or not the initialization could be done
+
+23)  Suppose we write a function for a class which is not supposed to change any data members in the class.  When we test the class, we get a runtime error.  After tracking down the source of the runtime error, we realize that this function mistakenly changed the value of a data member.  To make things easier, we should have:
+A. passed parameters into the function using const reference
+B. declared all the data members as constant (using const at the front of their declarations)
+C. used const at the end of the function prototype
+D. used a Peterson Language Modifier
+
+
+24)  Suppose we have two constructors for a class, one that passes in parameters and one that doesn’t.  Which of the following is true?
+A. Because we have two constructors when there should only be one, we will get a compiler error when we try to compile the program.
+B.  The client will be able to use the constructor that passes in parameters, but the client will not be able to use the constructor that doesn’t pass in parameters.
+C.  The client can use either one of these constructors, whichever one suits his/her needs.
+D.  It would be extremely poor programming practice for the client to use the constructor that passes in no parameters.
+
+25)  Suppose there are only two constructors for a class, one that passes in a single integer parameter called amount, for setting an amount data member, and another that passes in a single integer parameter called code, for setting a code data member.  Which of the following is true?
+A. An error exists in the class.
+B. Everything will be fine as long as the program can tell the difference between amount and code.
+C. We need to use a Peterson Language Modifier.
+D. We need to use different return types for the constructors.
+
+Short Answer
+
+1)  When modifying a class that has been in use by clients, why is it safe to change the void return type of a function to some other type?
+
+2)  When an object of a class is made, is a constructor called when the class programmer doesn’t write a constructor?  Why or why not?
+
+3)  Compare a function that uses const at the end of its function prototype to a function that does not (and could).  Discussing different types of errors that are possible during programming, explain why it is advantageous to use const.
+
+4)  Why should we pass a parameter by const reference (when it is appropriate) instead of by reference?
+
+5)  Is it possible to make more than one constructor for a class?  If not, why not?  If so, how must the constructors differ?
+
+6)  If a class has been in use by clients, explain what problem exists when we develop a new function A for a class and remove a function B from a class (which has become obsolete through the introduction of function A).
+
+7)  If a class has been in use by clients, explain what problem exists when we change the number of parameters of a certain class function from one to two.
+
+                                                                                                                                                                                                                                                                                        
+    ƒ  „  ’  ”  ›  Ö  Ú  Û  	  	  G	  H	  À	  Á	  S
+  T
+  `
+  a
+  i
+  j
+  q
+  r
+  ü
+  ý
+  
+  
+  *
+  +
+  9
+  :
+  ™
+  š
+  ¢
+  £
+  ­
+  ®
+  ¿
+  À
+  Ê
+  Í
+  õ
+  ˜  ™  §  ¨  ²  ³       3  4  Q  R  i  j  {  ñ  ò  5  B  g  ïãØÍØÂØÂØÍØÍØÍ·Ø·Í·Í·Í·Í·Í·Í·Í·Í·Í·Í·Í·Í·¬·¬Í¬Í¬Í¬Í¬Í¬Í¬Í¬¡Í¡Í¡   hdrë h!> OJ QJ  hdrë h¶D  OJ QJ  hdrë hªF> OJ QJ  hdrë h[˜ OJ QJ  hdrë h­U˜ OJ QJ  hdrë hï-è OJ QJ  hdrë hï-è 5OJ QJ hdrë hï-è 5CJ OJ QJ aJ  ?   
+  
+      €  ×  
+	  D	  Á	  Â	  P
+  ]
+  f
+  n
+  
+  ‚
+  ù
+  
+
+  '
+  6
+  E
+  F
+  –
+  Ÿ
+  ª
+  ¼
+  Ä
+  Å
+  ý            ý            ý            ý            ý            ô            ô            ô            ô            ý            ý            ô            ô            ô            ô            ý            ý            ô            ô            ô            ô            ý            ý            ô            ô            ô            ô            ý                       „Ð^„Ðgddrë     Å
+  •  ¤  ¯  »  Æ  Ç    0  N  f  z  {  î  g  Ö  (  C  D  Ù  ú    <  ]  ^  %  /  C  R  ý            ô            ô            ô            ô            ý            ý            ô            ô            ô            ô            ý            ý            ô            ô            ô            ô            ý            ý            ô            ô            ô            ô            ý            ý            ô            ô            ô                       „Ð^„Ðgddrë     g     ]  f  »  Ã    `  Ò      +  ,  =  Y  s  v  ’  “  e  ’  •  Ó  Ô  ×  û    Ò  Ô  á  Ñ  ¾  È    µ  Ü  ð  ö  ú  ý    õêßêßêßÔÉ¾É¾É¾É¾É¾É¾É¾³¾¨¨’¨‡|‡|q|‡¨ê                      hdrë h­0T OJ QJ  hdrë h"› OJ QJ  hdrë h8Š OJ QJ  hdrë htf™ OJ QJ  hdrë há~“ OJ QJ  hdrë h­\ß OJ QJ  hdrë hdrë OJ QJ  hdrë h40 OJ QJ  hdrë hÉÉ OJ QJ  hdrë hÇt­ OJ QJ  hdrë hb1¡ OJ QJ  hdrë h[˜ OJ QJ  hdrë h­U˜ OJ QJ (R  a  b  K  Z  i  y  ‹  Œ      Q  x  ›  œ    (    “  Ò  Ó  Ô  H  [  d  l  y  z  #  ö            ô            ô            ö            ö            ö            ö            ô            ô            ö            ö            ö            ö            ô            ô            ö            ö            ö            ö            ô            ô            ô            ö            ö            ö            ö            ô            ô                          „Ð^„Ðgddrë  #  F  „     Í  Î  .  Ê  
+    Î  Ï  
+    0  A  S  T  š   ¸   Ì   à   ý   þ   ÿ    !  !  !  ö            ö            ö            ö            ô            ô            ö            ö            ö            ö            ô            ô            ö            ö            ö            ö            ï            ï            ö            ö            ö            ö            ï            ï            ï            ï            ï                              gd"›       „Ð^„Ðgddrë      
+      )  /  3  @  D  R  S  W        k   s   þ   !  |!  †!  á!  1#  #  £#  º#  ý#  L$  ‹$  Ž$  À%  å%  õ%  ø%  &  œ&  ž&  «&  Ä&  É&  Ð&  õêßÔßÔßÔßÔßÔÉ¾É³É¨ÉÉ³’³‡³’³’|’|q|’|’f’hdrë h«n¥ OJ QJ  hdrë hýbÕ OJ QJ  hdrë h){› OJ QJ  hdrë hˆ× OJ QJ  hdrë h’{£ OJ QJ  hdrë h ]( OJ QJ  hdrë hdrë OJ QJ  hdrë h¬Û OJ QJ  hdrë htf™ OJ QJ  hdrë h‡D OJ QJ  hdrë h­0T OJ QJ  hdrë h"› OJ QJ  hdrë h¶D  OJ QJ  hdrë h!> OJ QJ (!  Ê!  Þ!  í!  
+"  *"  +"  f"  ®"  ÿ"  .#  y#  z#  $$  Œ$  þ$  %  W%  X%  P'  Ž'  Ê'  (  3(  4(  ¾(  Õ(  ø(  7)  ú            ñ            ñ            ñ            ñ            ú            ú            ñ            ñ            ñ            ñ            ú            ú            ñ            ñ            ñ            ñ            ú            ú            ñ            ñ            ñ            ñ            ú            ú            ñ            ñ            ñ                 „Ð^„Ðgddrë    gd"›  Ð&  Ò&  #'  0'  S'  '  Ž'  3(  ¥)  ·)  Á*  Ù*  è*  Ü+  Ý+  â+  í,  M-  N-  90  u0  ‚0  1  1  ˜1  ™1  ‡2  ˆ2  ð2  ñ2  o3  p3  M4  N4  R4  ê4  ë4  õêßêßêßÔÉÔÉÔÉ¾É³¨õ¨‘õ¾õ¾†¾†¾†¾†¾†{¾                                                              hdrë hMq OJ QJ  hdrë hC;: OJ QJ  hdrë h«n¥ 5OJ QJ hdrë h?kÙ OJ QJ  hdrë hç9 OJ QJ  hdrë hˆ× OJ QJ  hdrë hdrë OJ QJ  hdrë hp OJ QJ  hdrë hýbÕ OJ QJ  hdrë h){› OJ QJ  hdrë h’{£ OJ QJ  hdrë h«n¥ OJ QJ $7)  Ÿ)   )  è*  %+  ƒ+  ¶+  Û+  Ü+  Ý+  e,  é,  -  ë-  c.  d.  ‚/  £/  0  60  u0  v0  ƒ0  „0  1  1  ˜1  ™1  ‡2  ö            ñ            ñ            ö            ö            ö            ö            ñ            ñ            ñ            ö            ö            ö            ö            ñ            ñ            ö            ö            ö            ö            ñ            ñ            ñ            ñ            ñ            ñ            ñ            ñ                 gd"›    „Ð^„Ðgddrë  ‡2  ˆ2  ð2  ñ2  o3  p3  M4  N4  ê4  ë4  ú            ú            ú            ú            ú            ú            ú            ú            ú                                                                                                                                                                                                                                                                                                                                                                      gd"›  	2 1h:pdrë °Ð/ °à=!°Ð"°Ð#Ð$Ð%°  °Ð°ÐÐ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            þ   s                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             2     Æ  Ö  æ  ö      &  6  F  V  f  v  †  –  Æ  Ö  æ  ö      2  (  Ø  è  &  6  F  V  f  v  †  –  Æ  Ö  æ  ö      &  6  F  V  f  v  †  –  Æ  Ö  æ  ö      &  6  F  V  f  v  †  –  Æ  Ö  æ  ö      &  6  F  V  f  v  †  –  Æ  Ö  æ  ö      &  6  F  V  f  v  †  –  Æ  Ö  æ  ö      &  6  F  V  f  v  †  –  8  X  ø      V  ~       °  À  Ð  €  à  ð          0  @  à  ð          0  @  à  ð          0  @  à  ð          0  @  à  ð          0  @  à  ð          0  @  à  ð          0  @  à  ð          0  @  à  ð          0  @  à  ð          0  @  à  ð          0  @  à  ð          0  @  à  ð          0  @  à  ð          0  @     _HmH	nH	sH	tH	    @  `ñÿ @          N o r m a l       CJ _HaJ mH	sH	tH	                  D A òÿ¡ D          D e f a u l t   P a r a g r a p h   F o n t     R i óÿ³ R          T a b l e   N o r m a l    ö  4Ö 
+l 4Ö   aö   
+   ( k ôÿÁ (            N o   L i s t         PK     ! éÞ¿ÿ        [Content_Types].xml¬‘ËNÃ0E÷Hüƒå-Jœ²@%é‚ÇŽÇ¢|ÀÈ™$ÉØ²§Uû÷LÒTB¨ l,Ù3÷ž;ãr½ µÃ˜œ§J¯òB+$ëG]¥ß7OÙ­V‰<a¥˜ôº¾¼(7‡€I‰šR¥{æpgL²=Žr¤Òú8Ë5v&€ý€ÍuQÜë‰‘8ãÉC×å¶°X=îåù˜$â´º?6N¬JCƒ³À’Ôì¨ùFÉB.Ê¹'õ.¤+‰¡ÍYÂTù°è^e5Ñ5¨Þ ò
+ŒÃ°‰_Ïg -æ¿;ž‰ìÛÖYl¼ÝŽ²Ž|6^ÌNÁÿ`õ?èÓÌ[  ÿÿ PK     ! ¥Ö§çÀ   6  
+   _rels/.rels„ÏjÃ0‡ï…½ƒÑ}QÒÃ%v/¥C/£} á(h"ÛëÛOÇ
+»„¤ï÷©=þ®‹ùá”ç šªÃâC?Ëháv=¿‚É…¤§%[xp†£{Ûµ_¼PÑ£<Í1¥H¶0•ˆÙO¼R®BdÑÉÒJEÛ4b$§‘q_×˜žà6LÓõR×7`®¨Éÿ³Ã0ÌžOÁ¯,åEn7”Liäb¡¨/ãS½¨eªÔÐµ¸ùÖý  ÿÿ PK     ! ky–ƒ   Š      theme/theme/themeManager.xmlÌM
+Ã @á}¡wÙ7c»(Eb²Ë®»ö CœAÇ ÒŸÛ×åãƒ7ÎßÕ›K
+Y,œ 
+ŠeÍ.ˆ·ð|,§¨ÚHÅ,láÇæéxÉ´ßIÈsQ}#Õ…­µÝ Öµ+Õ!ï,Ý^¹$j=‹GWèÓ÷)âEë+&
+8ý  ÿÿ PK     ! ªR%ßÆ  ‹     theme/theme/theme1.xmlìY]‹ÛF}/ô?½;þ’ü±ÄlÙÎ¶ÙMBì¤äql­ÉŽ4F3Þ	’<
+¥iéC}ëCiH /é¯Ù6¥M!¡wF¶<c»›%…¥d
+‹4:÷Î™{¯ÎI—¯Ü¨s„NXÜp‹—
+®ƒã!‘xÒpo÷»¹šëpâ¢,Æ
+wŽ¹{e÷Ã.£â;`óÔpC!¦;ù<Â0â—ØÇpmÌ’	8M&ùQ‚ŽÁoDó¥B¡’‰]'F¸½1“!vúÒ¥»»tÞ¡p
+. †4éI×Ø°PØÑaQ"øœ 4qŽm¸0Ïˆ÷ñ}á:qnAý¹ùÝËy´³0¢b‹­f×U
+»…Áè°¤æL&ƒlRÏó½J3ó¯ Tlâ:ÕN¥SÉü) a¥)Ý§ßª·Úþ«ÒC‹ïvµ].xÍyƒsÓ—?¯@©oßíE¯@)ÞßÀ{^µx^R|e_-4Û^ÕÀ+PHI|¸.ø•r°\m3ºg…×}¯[--œ¯PP
+YuÉ)Æ,Ûj-B÷XÒ€R$HìˆùÑª8@”âì“I…7E1ã0\(º…2ü—?O©ˆ Œ4kÉ
+˜ð!ÉÇáÃ„LEÃý¼ºäÍËß¼|îœ<zqòè—“ÇOýœ:2¬öP<Ñ­^ÿÅßO?uþzþÝë'_Ùñ\ÇÿþÓg¿ýú¥+]…àÕ×ÏþxñìÕ7ŸÿùÃ
+¼™ ï“sç:>vn±¦B`2Çƒäí,ú!"ºE3žp#9‹ÅG„úúQdÁµ°Á;	HŒ
+xuvÏ Ü
+“™ ×ÂÈ 0F[,±FášœK
+sOì“'3w
+¡#ÛÜŠüvfSÐVbs„Ø y“¢X 	Ž±pä5vˆ±euw	1âz@†	ãl,œ»Äi!b
+IŸŒjZí‘ò2·„|±9¸ã´µ­ºL$ÜˆZÈ÷15ÂxÍŠl.û(¢zÀ÷‘m${ód¨ã:\@¦'˜2§3ÂœÛln$°^-é×@^ìi? óÈD&‚Ú|î#Ætd›!Š¦6lÄ¡ŽýˆB‰"ç&6ø3ïyy@ñÖtß!ØH÷éjp”U§´*ye–Xry3£~{s:FXI
+¿¡ç‰O÷5Y÷ÿ[Y !}õíSËª.ª 7b½£öÖd|n]¼–ŒÈÅ×î6šÅ71Ü.›
+ì½t¿—n÷/ÝÛîçw/Ø+ù–[Åt«®6îÑÖ}û˜PÚsŠ÷¹ÚºsèL£.J;õÌŠ³ç¸i‡òN†	Ü$AÊÆI˜ø„ˆ°¢)ìï‹®t2á
+×îL‡m¿¶ú–x:‹Ø(}\-å£i*‰ÕxÁÏÆáQC¤èJuõ–¹Wl'êQyI@Ú¾
+	m2“DÙB¢º”ARæ4
+	µ²wÂ¢naQ“î—©Ú`Ô²¬ÀÖÉ
+WÃõ=0#x¢BdžÒT/³«’ù.3½-˜FÀ>bY«L×%×­Ë“«KKí™6Hhåf’P‘Q=Œ‡h„Õ)GÏBãms]_¥Ô 'C¡æƒÒZÑ¨ÖþÅys
+vëÚ@c])hì7ÜJÙ‡’¢iÃÃc?FS¨.·¼ˆNàÝÙP$é
+e™&\´Ó€+ÑIÕ "'%QÃ•ËÏÒ@c¥!Š[±‚paÉÕAV.9Hº™d<ã¡ÐÓ®ÈH§§ ð©VX¯*óóƒ¥%›Aº{áèØÐYr
+A‰ùÕ¢àˆpxûSL£9"ð:3²Uý­5¦…ìêïU
+¥ãˆNC´è(º˜§p%åu–Å@;[¬ª…dÑ Ù`õ Ý4ë)‡­]÷t#9M4W=ÓPÙ5í*fÌ°lk±<_“×X-Cš¦wøTº×%·¾Ôºµ}BÖ% àYü,]÷
+A£¶šÌ &oÊ°ÔìÅ¨Ù;–
+<…ÚYš„¦ú•¥Ûµ¸e=Â:ž«óƒÝzÕÂÐx¹¯T‘Vß=ôOlpÄ£
+/gTp•Jøð ØõÔž$•
+¸Eî‹Å­GÎ,!
+÷AÁozAÉr…šßÉye¯«ùÍr®éûåbÇ/Ú­ÒCh,"ŒŠ~úÍ¥
+¯¢è|ñåEo|}‰–oÛ.
+Y”gêëJ^W__Š¥í__¢ó RêÖËõV%W/7»9¯ÝªåêA¥•kW‚j»ÛüZ½ûÐuŽØk–¯Ò©å*Å Èy•‚¤_«çª^©ÔôªÍZÇk>\lc`å©|,báU¼vÿ  ÿÿ PK     ! 
+ÑŸ¶     '   theme/theme/_rels/themeManager.xml.rels„M
+Â0„÷‚wooÓº‘&ÝˆÐ­Ô„ä5
+6?$Qìí
+®,.‡a¾™i»—Éc2Þ1hª:é•qšÁm¸ìŽ@RN‰Ù;d°`‚Žo7íg‘K(M&$R(.1˜r'J“œÐŠTù€®8£Vä"£¦AÈ»ÐH÷u} ñ›|Å$½b{Õ –Pšÿ³ý8‰g/]þQAsÙ…(¢ÆÌà#›ªLÊ[ººÄß   ÿÿ PK-      ! éÞ¿ÿ                      [Content_Types].xmlPK-      ! ¥Ö§çÀ   6  
+             0  _rels/.relsPK-      ! ky–ƒ   Š                  theme/theme/themeManager.xmlPK-      ! ªR%ßÆ  ‹               Ö  theme/theme/theme1.xmlPK-      ! 
+ÑŸ¶     '             Ð	  theme/theme/_rels/themeManager.xml.relsPK      ]  Ë
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<a:clrMap xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" bg1="lt1" tx1="dk1" bg2="lt2" tx2="dk2" accent1="accent1" accent2="accent2" accent3="accent3" accent4="accent4" accent5="accent5" accent6="accent6" hlink="hlink" folHlink="folHlink"/>    ë,    L    ÿÿÿÿ   g    Ð&  ë4        !   #      Å
+  R  #  !  7)  ‡2  ë4               "   $   %     ð8     ð                    @ ñ   ÿÿ    ÿ €€€ ÷    ð’    ð         ð0    ð(    	ð                    
+ð          ðB    
+ð        S 
+ð   ¿   Ë    ÿ   	   ?    ð                    l  t  ñ  ù  T  \  ¥	  ¨	  ä	  ç	  (
+  +
+  7
+  ?
+  F
+  N
+  Z
+  ]
+  ‘
+  ”
+  N
+  S
+  ]
+  `
+  m
+  p
+  
+  ‚
+  Ò  Ó  k  u  Õ  à  å  ó    "  ©  ³  Y  j  ¨  ²  Ø  â  .  ;  ’  ›  É  Ñ    $  *  2  ý    í  õ  #  +  1  9  x  €  ó  û  Û#  Ü#  u(  u(  ‚(  ‚(  )  )  —)  ˜)  †*  ‡*  ï*  ð*  n+  o+  L,  M,  ê,  ê,  í,                                                                                                                                                          Ò  Ó  ý    Û#  Ü#  u(  u(  ‚(  ‚(  )  )  —)  ˜)  †*  ‡*  ï*  ð*  n+  o+  L,  M,  ê,  ê,  í,                                  
+   Ü#  Ý#  v(  ‚(  í,                         Ò  Ó  ý    Û#  Ü#  u(  u(  ‚(  ‚(  )  )  —)  ˜)  †*  ‡*  ï*  ð*  n+  o+  L,  M,  ê,  ê,  í,                                                    å         «K  v  @% È, ´[ B EG 40 ¶D  9 Ô~	 µ
+ °C
+ ÕN
+ w
+ tC ç9 G q Ø' ôH f ko ‚" éx ‡6 {k ˆ  é, Ú  à+  Éo! —$ Šs$ ' 0[(  ]( ÈJ) * VU* ÏA, 01 nq3 Ôj4 ?{4 2~4 žG8 ÊE9 ¯F9 C;: < Ï&= <= óG= !> 6A> ªF> ˆM> -J? ¥I@ ¿jA ;:C ‡D 'AD éE ”TG ÒI c4I jlJ â0L L “6M fIP ZrQ ÍxQ äR OR •0S ­0T S6X _X =Y 7A^ €S^ q7_ &b âc ¸3c Ä#d ÕKf }f 
+	h ÙAi :#k ßDl HFl Yl hm ˜@o :Ho =p p Mq s7s Ìpt ;9u âKu žzw Cx &6x ÄMx 
+zx ²y Cy ;z :z sF{ J| 2+| Ô~ i~ îw~ +ƒ ‘c„ Äs„ ~
+… §_… Lv… ¹9‡ +~‡ å7ˆ ŒŠ 8Š ¶pŠ 8‹ ÈtŒ k Â; ZŽ «
+ FW ‹N È	‘ Œ‘ I]‘ È<’ á~“ )— ­U˜ [˜ Õx˜ tf™ "› ){› y\œ @qœ ®G ŽRž 5_ž ;:Ÿ äWŸ b1¡ éI¡ &a¢ J9£ ’{£ Z¤ «n¥ î\« ¬ Ù"¬ õ­ Çt­ ê® D® œG® ¡R¯ Œ° v° ³  a³ E´ ¥*µ ª2µ ÿP· ¿D¹ z¹ Š
+º msº o{º 8J» «¼ –½ ­%¾ 
+Q¾ ”%À žTÀ ýhÁ wYÂ 2Ã ÞUÃ ™}Ã |
+Ç °Ç ÉÉ Ú\Ì }vÌ iSÍ âÎ ¯Î J$Î î&Ñ 
+YÑ >GÒ iÔ +Ô Œ@Õ ýbÕ }Õ ˆ× Š\Ø `.Ù J]Ù ?kÙ ¬Û ÁÛ ñ Ü ebÝ ®pÞ ­\ß úRà /á Ž5â Dxâ ä Íwä ©hæ ï-è Ö>é > ê  Bê bë drë ÿ/ì KIì Þ[í H7î H:î rî Pï >ï 0ï Kuò àjô UBö ‚Gö oOö Q+÷ þ\÷ Ki÷ g÷ ½,ø bø XKù ÒKû Òý ûBý Ò;þ †Wþ "ÿ ’iÿ     ë,  í,         ÿ@€ Ü#  Ü#        Ü#      Ü#             ë,  ø   @  ÿÿ     U n k n o w n ÿÿ            ÿÿ     ÿÿ   ÿÿ    ÿÿ   ÿÿ       g ÿ. àCx À	       ÿ      T i m e s   N e w   R o m a n   T i m e s   N e w   R o m a n   5                     €    S y m b o l   3.  
+ÿ* àCx À	       ÿ      A r i a l   7.  ÿ àÿ¬ @       Ÿ      C a l i b r i   A  ÿ àÿ$ B        Ÿ      C a m b r i a   M a t h   "  1ˆ ðÐ  h    ÌÜBÇÏÜBÇ        ´  7&       Q   ´  7&      Q       ! ð                                                                                                                                                                                                                                                                                                                        ÐÐ´ ´ 4              Õ,  Õ,                                                                       	3ƒQ ð  üý                        HP    	ðÿ?  ä  ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+Q¾    2                     !                             x   x                  
+       Ü      ÿÿ       	 C h a p t e r   1        H P   A u t h o r i z e d   C u s t o m e r  P a m e l a   W i e s e                                                                                                                                                                                                                                                                                       þÿ                      à…ŸòùOh«‘ +'³Ù0   ˆ              ˜      ¬      ¸      Ø      ä       ð         	        $  
+   D     P  
+   \     h     p     x     €     ä        Chapter 1                   HP Authorized Customer                            Normal        Pamela Wiese          3         Microsoft Office Word   @    ÒIk    @    @êÉÕqÑ@    45ÖqÑ         ´     7&                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 þÿ                      ÕÍÕœ.“— +,ù®0           h      p      ”      œ      ¤      ¬   
+   ´      ¼      Ä      Ì   
+   Ô      ê      ä        Clarion University of PA       Q            Õ,        
+       
+       
+       
+            
+   Chapter 1            Title                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        	   
+   
+      
+                                                             !   "   #   $   %   &   þÿÿÿ(   )   *   +   ,   -   .   þÿÿÿ0   1   2   3   4   5   6   7   8   9   :   ;   <   =   >   ?   @   þÿÿÿB   C   D   E   F   G   H   þÿÿÿJ   K   L   M   N   O   P   þÿÿÿýÿÿÿS   þÿÿÿþÿÿÿþÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿR o o t   E n t r y                                              ÿÿÿÿÿÿÿÿ   	     À      F             4BÖqÑU   €       D a t a                                                         
+ ÿÿÿÿÿÿÿÿÿÿÿÿ                                    '          1 T a b l e                                                            ÿÿÿÿ                                    /   þ"      W o r d D o c u m e n t                                                ÿÿÿÿ                                        4L       S u m m a r y I n f o r m a t i o n                           ( ÿÿÿÿÿÿÿÿÿÿÿÿ                                    A           D o c u m e n t S u m m a r y I n f o r m a t i o n           8    ÿÿÿÿÿÿÿÿ                                    I           C o m p O b j                                                   ÿÿÿÿÿÿÿÿÿÿÿÿ                                        r                                                                           ÿÿÿÿÿÿÿÿÿÿÿÿ                                                   þÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ þÿ
+  ÿÿÿÿ	     À      F    Microsoft Word 97-2003 Document 
+   MSWordDoc    Word.Document.8 ô9²q                                                                                                                                                                                                                                                                                                                                                                                                                          
