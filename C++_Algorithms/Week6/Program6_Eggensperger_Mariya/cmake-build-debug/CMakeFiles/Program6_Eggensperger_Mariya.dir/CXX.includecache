@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/student/Desktop/CSUMB/CST370/Week6/Program6_Eggensperger_Mariya/sort_tester.cpp
+iostream
+-
+iomanip
+-
+stdio.h
+-
+

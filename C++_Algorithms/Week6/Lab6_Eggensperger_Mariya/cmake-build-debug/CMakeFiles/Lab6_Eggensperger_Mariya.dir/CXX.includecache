@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/student/Desktop/CSUMB/CST370/Week6/Lab6_Eggensperger_Mariya/search_tester.cpp
+iostream
+-
+regex
+-
+sstream
+-
+
