@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/student/Desktop/CSUMB/CST370/Week3/Lab3_Eggensperger_Mariya/Queue.cpp
+iostream
+-
+Queue.h
+/Users/student/Desktop/CSUMB/CST370/Week3/Lab3_Eggensperger_Mariya/Queue.h
+
+/Users/student/Desktop/CSUMB/CST370/Week3/Lab3_Eggensperger_Mariya/Queue.h
+iostream
+-
+string
+-
+
+/Users/student/Desktop/CSUMB/CST370/Week3/Lab3_Eggensperger_Mariya/queue_tester.cpp
+iostream
+-
+fstream
+-
+string
+-
+Queue.h
+/Users/student/Desktop/CSUMB/CST370/Week3/Lab3_Eggensperger_Mariya/Queue.h
+
